@@ -1,0 +1,76 @@
+Score Comércio = 
+VAR Dist =
+    MAX('Análise de Localizações'[Distância a pé até comércio (m)])
+
+RETURN
+SWITCH(
+    TRUE(),
+    Dist <= 1000, 100,
+    Dist <= 2000, 90,
+    Dist <= 3000, 75,
+    Dist <= 5000, 60,
+    40
+)
+
+
+Score Educação = 
+VAR Dist =
+    MAX('Análise de Localizações'[Distância a pé até escola (m)])
+
+RETURN
+SWITCH(
+    TRUE(),
+    Dist <= 500, 100,
+    Dist <= 1000, 90,
+    Dist <= 2000, 80,
+    Dist <= 3000, 65,
+    Dist <= 5000, 50,
+    30
+)
+
+
+Score Lazer = 
+VAR Dist =
+    MAX('Análise de Localizações'[Distância a pé até lazer (m)])
+
+RETURN
+SWITCH(
+    TRUE(),
+    Dist <= 500, 100,
+    Dist <= 1000, 90,
+    Dist <= 2000, 80,
+    Dist <= 3000, 65,
+    Dist <= 5000, 50,
+    30
+)
+
+
+Score Metro = 
+VAR Dist =
+    MAX('Análise de Localizações'[Distância a pé até a estação (m)])
+
+RETURN
+SWITCH(
+    TRUE(),
+    Dist <= 500, 100,
+    Dist <= 1000, 90,
+    Dist <= 1500, 80,
+    Dist <= 2000, 70,
+    Dist <= 3000, 50,
+    30
+)
+
+
+Score Saúde = 
+VAR Dist =
+    MAX('Análise de Localizações'[Distância a pé até hospital (m)])
+
+RETURN
+SWITCH(
+    TRUE(),
+    Dist <= 1000, 100,
+    Dist <= 2000, 90,
+    Dist <= 3000, 75,
+    Dist <= 5000, 60,
+    40
+)
