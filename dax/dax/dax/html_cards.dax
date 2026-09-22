@@ -1,0 +1,227 @@
+HTML Infraestrutura = 
+
+VAR Comercio =
+    MAX('Análise de Localizações'[Comércio mais próximo (mercado)])
+
+VAR DistComercio =
+    [Distância Comércio Formatada]
+
+VAR Escola =
+    MAX('Análise de Localizações'[Escola/Faculdade mais próxima])
+
+VAR DistEscola =
+    [Distância Escola Formatada]
+
+VAR Hospital =
+    MAX('Análise de Localizações'[Hospital mais próximo])
+
+VAR DistHospital =
+    [Distância Hospital Formatada]
+
+VAR Lazer =
+    MAX('Análise de Localizações'[Lazer mais próximo (parque/shopping)])
+
+VAR DistLazer =
+    [Distância Lazer Formatada]
+
+VAR Metro =
+    MAX('Análise de Localizações'[Estação ])
+
+VAR DistMetro =
+    FORMAT(
+        MAX('Análise de Localizações'[Distância a pé até a estação (m)]),
+        "#,##0 m"
+    )
+
+RETURN
+
+"
+<div style='
+display:flex;
+width:100%;
+gap:16px;
+font-family:Segoe UI;
+'>
+
+<div style='
+flex:1;
+min-height:145px;
+background:#1F1F1F;
+border:1px solid #916E42;
+border-radius:14px;
+padding:20px;
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+box-shadow:0px 4px 14px rgba(0,0,0,0.35);
+'>
+
+<div style='font-size:15px;font-weight:600;color:#D4A76A;'>🚇 Metrô</div>
+
+<div style='
+font-size:42px;
+font-weight:700;
+line-height:42px;
+margin-top:8px;
+color:#F5EEE4;
+'>
+" & DistMetro & "
+</div>
+
+<div style='
+font-size:17px;
+margin-top:12px;
+color:#D9D9D9;
+'>
+" & Metro & "
+</div>
+
+</div>
+
+<div style='
+flex:1;
+min-height:145px;
+background:#1F1F1F;
+border:1px solid #916E42;
+border-radius:14px;
+padding:20px;
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+box-shadow:0px 4px 14px rgba(0,0,0,0.35);
+'>
+
+<div style='font-size:15px;font-weight:600;color:#D4A76A;'>🎓 Educação</div>
+
+<div style='
+font-size:42px;
+font-weight:700;
+line-height:42px;
+margin-top:8px;
+color:#F5EEE4;
+'>
+" & DistEscola & "
+</div>
+
+<div style='
+font-size:17px;
+margin-top:12px;
+color:#D9D9D9;
+'>
+" & Escola & "
+</div>
+
+</div>
+
+<div style='
+flex:1;
+min-height:145px;
+background:#1F1F1F;
+border:1px solid #916E42;
+border-radius:14px;
+padding:20px;
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+box-shadow:0px 4px 14px rgba(0,0,0,0.35);
+'>
+
+<div style='font-size:15px;font-weight:600;color:#D4A76A;'>🏥 Saúde</div>
+
+<div style='
+font-size:42px;
+font-weight:700;
+line-height:42px;
+margin-top:8px;
+color:#F5EEE4;
+'>
+" & DistHospital & "
+</div>
+
+<div style='
+font-size:17px;
+margin-top:12px;
+color:#D9D9D9;
+'>
+" & Hospital & "
+</div>
+
+</div>
+
+<div style='
+flex:1;
+min-height:145px;
+background:#1F1F1F;
+border:1px solid #916E42;
+border-radius:14px;
+padding:20px;
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+box-shadow:0px 4px 14px rgba(0,0,0,0.35);
+'>
+
+<div style='font-size:15px;font-weight:600;color:#D4A76A;'>🌳 Lazer</div>
+
+<div style='
+font-size:42px;
+font-weight:700;
+line-height:42px;
+margin-top:8px;
+color:#F5EEE4;
+'>
+" & DistLazer & "
+</div>
+
+<div style='
+font-size:17px;
+margin-top:12px;
+color:#D9D9D9;
+'>
+" & Lazer & "
+</div>
+
+</div>
+
+<div style='
+flex:1;
+min-height:145px;
+background:#1F1F1F;
+border:1px solid #916E42;
+border-radius:14px;
+padding:20px;
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+box-shadow:0px 4px 14px rgba(0,0,0,0.35);
+'>
+
+<div style='font-size:15px;font-weight:600;color:#D4A76A;'>🛒 Comércio</div>
+
+<div style='
+font-size:42px;
+font-weight:700;
+line-height:42px;
+margin-top:8px;
+color:#F5EEE4;
+'>
+" & DistComercio & "
+</div>
+
+<div style='
+font-size:17px;
+margin-top:12px;
+color:#D9D9D9;
+'>
+" & Comercio & "
+</div>
+
+</div>
+
+</div>
+"
