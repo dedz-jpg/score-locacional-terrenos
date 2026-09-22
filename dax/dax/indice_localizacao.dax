@@ -1,0 +1,45 @@
+Índice Localização = 
+VAR Metro =
+    MAX('Análise de Localizações'[Distância a pé até a estação (m)])
+
+VAR Escola =
+    MAX('Análise de Localizações'[Distância a pé até escola (m)])
+
+VAR Hospital =
+    MAX('Análise de Localizações'[Distância a pé até hospital (m)])
+
+VAR Lazer =
+    MAX('Análise de Localizações'[Distância a pé até lazer (m)])
+
+VAR Comercio =
+    MAX('Análise de Localizações'[Distância a pé até comércio (m)])
+
+VAR NotaMetro =
+    MAX(0, 100 - (Metro / 50))
+
+VAR NotaEscola =
+    MAX(0, 100 - (Escola / 75))
+
+VAR NotaHospital =
+    MAX(0, 100 - (Hospital / 100))
+
+VAR NotaLazer =
+    MAX(0, 100 - (Lazer / 75))
+
+VAR NotaComercio =
+    MAX(0, 100 - (Comercio / 100))
+
+RETURN
+
+ROUND(
+    NotaMetro * 0.50 +
+    NotaEscola * 0.15 +
+    NotaLazer * 0.15 +
+    NotaHospital * 0.10 +
+    NotaComercio * 0.10,
+0
+)
+
+
+Índice Localização Texto = 
+FORMAT([Índice Localização], "0") & "/100"
