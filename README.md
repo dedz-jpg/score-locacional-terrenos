@@ -1,0 +1,1 @@
+# score-locacional-terrenos
