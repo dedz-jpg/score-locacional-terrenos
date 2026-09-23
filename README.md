@@ -117,7 +117,7 @@ E formatado para exibição:
 FORMAT([Índice Localização], "0") & "/100"
 ```
 
-Código completo em [`dax/indice_localizacao.dax`](./dax/indice_localizacao.dax).
+Código completo em [`dax/indice_localizacao.dax`](dax/dax/indice_localizacao.dax).
 
 ---
 
@@ -141,7 +141,7 @@ VAR DistMetro = FORMAT(MAX('Análise de Localizações'[Distância a pé até a 
 RETURN "<div style='display:flex; ...'> ... </div>"
 ```
 
-Código completo (5 cards) em [`dax/html_cards.dax`](./dax/html_cards.dax).
+Código completo (5 cards) em [`dax/html_cards.dax`](dax/dax/dax/html_cards.dax).
 
 ---
 
